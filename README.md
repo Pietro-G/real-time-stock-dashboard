@@ -1,6 +1,6 @@
 # tb-stock-dashboard
 
-A full stack project that
+A full stack project that mocks data handling using cron jobs and polling mechanisms.
 
 ## Prerequisites
 
