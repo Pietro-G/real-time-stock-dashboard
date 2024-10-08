@@ -7,7 +7,7 @@ A full stack project that
 Before you begin, ensure you have the following tools installed:
 
 - [Node.js](https://nodejs.org/) (version 14.x or higher)
-- [PostgreSQL](https://www.postgresql.org/)=
+- [PostgreSQL](https://www.postgresql.org/) (through supabase)
 - [Supabase](https://supabase.io/) (for production database setup)
 - [Git](https://git-scm.com/)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
@@ -30,8 +30,8 @@ Before you begin, ensure you have the following tools installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+git clone https://github.com/Pietro-G/real-time-stock-dashboard
+cd stock-dashboard
 ```
 
 ### 2. Set Up Environment Variables
@@ -54,7 +54,7 @@ Navigate to the `backend` directory and install the necessary dependencies:
 
 ```bash
 cd backend
-npm install  # or yarn install
+npm install
 ```
 
 ### 2. Set Up the Database
@@ -62,16 +62,10 @@ npm install  # or yarn install
 You can set up the PostgreSQL database for local development using a Makefile task:
 
 ```bash
-make db-setup  # Initializes local PostgreSQL with tables
+make seed  # Seeds initial data with table
 ```
 
-This command uses the `local.sql` file to initialize the database.
-
-For production, run:
-
-```bash
-make db-setup-prod  # Initializes production PostgreSQL via Supabase
-```
+This command uses the `seed.sql` file to initialize the database using .env credentials
 
 Ensure you have the connection strings properly set in your `.env` file.
 
